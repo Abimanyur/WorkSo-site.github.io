@@ -149,7 +149,7 @@ nav{
 /* end of hero-page */
 main{
     padding: 0 10vw;
-    width: 100vw;
+    width: 100%;
 }
 /* service page */
 
@@ -163,7 +163,6 @@ main{
     position: relative;
     width: 80vw;
     height: 10rem;
-    /* overflow: visible; */
     
 } 
 .head h1{
@@ -173,7 +172,7 @@ main{
     background-color:#92E3A9;
     width: 70vw;
     height: 5rem;
-    right:-60px;
+    right:0;
     /* margin-top: 25px; */
     rotate: 177deg;
     position: absolute;
@@ -184,7 +183,7 @@ main{
 
 .other{
     background-color:#789124;
-    left:20%;
+    left:15%;
     top: 30%;
     /* transition: var(--transition); */
     rotate: 180deg;
@@ -231,6 +230,7 @@ main{
     z-index: -4;
 }
 .box-0{
+    width: 100%;
     grid-area: box0;
     background: linear-gradient(180deg, rgba(252,187,21,1) 0%, rgba(127,178,76,1) 50%, rgba(43,198,137,1) 100%);
     height: 100%;
@@ -240,15 +240,17 @@ main{
     z-index: -1;
 }
 .box-0 img:nth-of-type(1){
-    left: 0;
+    left: 10px;
+    width:30%;
     top: 50px;
-    width: 350px;
 }
 .box-0 img:nth-of-type(2){
-    left:200px;
+    left:230px;
+    width: 15%;
     z-index: -3;
 }
 .box-0 img:nth-of-type(3){
+    width: 25%;
     right: 100px;
     top: 50px;
 }
@@ -256,28 +258,36 @@ main{
     margin-bottom: 1rem;
     font-size: 2rem;
 }
-.box-0 p{
+.aboutbox p{
     font-size: 1.5rem;
+    line-height: 2rem;
 }
 
 .box-1{
     grid-area: box1;
     background: linear-gradient(180deg, rgba(41,199,139,1) 0%, rgba(12,86,64,1) 83%, rgba(6,65,50,1) 100%);
-    width: 542px;
     height: 810px;
     
 }
 .box-1 img:nth-of-type(1){
     left: 0;
+    width: 100%;
     bottom: 15%;
 }
 .box-1 img:nth-of-type(2){
     left: 0;
+    width: 100%;
     bottom: 15%;
+}
+.box-1 h1{
+    font-size: 1.5rem;
+    
+}
+.box-1 p{
+    margin-top: 20px;
 }
 .box-2{
     grid-area: box2;
-    width: 542px;
     height: 400px;
     background: linear-gradient(180deg, rgba(41,199,139,1) 0%, rgba(12,131,99,1) 100%);
     
@@ -287,16 +297,17 @@ main{
     text-align: right;
 }
 .box-2 img:nth-of-type(1){
+    width: 50%;
     bottom: 0;
 }
 .box-3{
     grid-area: box3;
-    width: 542px;
     height: 400px;
     background: linear-gradient(180deg, rgba(12,131,99,1) 0%, rgba(8,87,66,1) 63%, rgba(6,65,50,1) 100%);
     
 }
 .box-3 img:nth-of-type(1){
+    width: 100%;
     bottom: 30%;
     left: 0;
 }
