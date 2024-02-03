@@ -112,11 +112,13 @@ nav{
 }
 
 .hero-title h1{
+    color: black;
     margin: 25px 0;
     font-size: var(--test-h1);
 }
 
 .hero-title p{
+    color: black;
     margin-bottom:50px;
     font-size: 1.5rem;
 }
