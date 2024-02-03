@@ -321,10 +321,10 @@ main{
 /* pricing page */
 .pricing{
     margin-bottom: 10rem;
-    overflow-x: scroll;
+    overflow-x:scroll;
 }
 .pricing-body{
-    width: 100%;
+    width:fit-content;
     display: flex;
     gap: 20px;
     justify-content: space-around;
