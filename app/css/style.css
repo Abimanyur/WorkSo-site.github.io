@@ -6,7 +6,7 @@
     --fs-h2:clamp(0.625rem, 0.924vw + 0.386rem, 1.125rem);
     --fs-480:clamp(15.625rem, 26.559vw + 8.753rem, 30rem);
     --transition: all 0.3s linear;
-    
+    --test-h1:clamp(1.5rem, 0.924vw + 1.261rem, 2rem);
 }
 
 *{
@@ -45,7 +45,9 @@ button{
     background: none;
     border: none;
 }
-
+h1{
+    font-size: var(--test-h1);
+}
 /*end of neutral style */
 
 /* nav bar */
@@ -111,7 +113,7 @@ nav{
 
 .hero-title h1{
     margin: 25px 0;
-    font-size: var(--fs-h1);
+    font-size: var(--test-h1);
 }
 
 .hero-title p{
@@ -274,8 +276,7 @@ main{
     bottom: 15%;
 }
 .box-1 h1{
-    font-size: 1.5rem;
-    
+    /* font-size: 2rem; */
 }
 .box-1 p{
     margin-top: 20px;
@@ -456,6 +457,7 @@ main{
 @media (max-width:600px){
     
     .hero{
+        margin-top: 5rem;
         grid-template-columns: none;
         grid-template-rows: 60% 40%;
     }
@@ -473,7 +475,9 @@ main{
     .hero-title p{
         font-size: 1.2rem;
     }
-    
+    /* h1{
+        font-size: 1.5rem;
+    } */
     
 }
 
