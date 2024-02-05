@@ -7,17 +7,22 @@
     --fs-480:clamp(15.625rem, 26.559vw + 8.753rem, 30rem);
     --transition: all 0.3s linear;
     --boxS-serbox:clamp(14.5rem, 19.4vw + 9.48rem, 25rem);
-    --boxS-pribox:clamp(15.625rem, 5.774vw + 14.131rem, 18.75rem);
+    --boxS-pribox:clamp(25.625rem, 5.774vw + 14.131rem, 18.75rem);
+    --imgS-serimg:clamp(9.375rem, 5.774vw + 7.881rem, 12.5rem);
 }
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: var(--Bg-yellow);
+ 
 }
 
 
@@ -59,7 +64,8 @@ p{
 .head{
     position: relative;
     width: 80vw;
-    height: 10rem;
+    height: fit-content;
+    margin: 5rem 0;
 } 
 .head h1{
     text-align: center;
@@ -68,20 +74,26 @@ p{
     background-color:#92E3A9;
     width: 70vw;
     height: 5rem;
-    right:0;
+    right:4%;
     /* margin-top: 25px; */
     rotate: 177deg;
     position: absolute;
     z-index: -1;
-
     
 }
-
+.show-animate{
+    animation: slideInRight 1s linear;
+    animation-timeline: view(200px );
+}
+.anima-1{
+    animation: slideInLeft 1s ease-in;
+    animation-timeline: view();
+}
 .other{
     background-color:#789124;
     left:15%;
     top: 30%;
-    /* transition: var(--transition); */
+    
     rotate: 180deg;
 }
 /* end of section head */
@@ -195,40 +207,78 @@ main{
     width: 80vw;
 }
 
-
 .service-body{
     display: grid;
     width: 100%;
     grid-template-columns: 50% 50%;
     place-items: center;
 }
+
 .serbox{
     width: var(--boxS-serbox);
     min-height: 400px;
-    width: fit-content;
+    height:fit-content;
+    max-height: 450px;
     background: black;
     margin: 20px;
     color: #ffff;
     border-radius: 25px;
     padding: 0 25px;
+    position: relative;
+}
+.serbox img{
+    width: 70%;
+    right: -15%;
+    top: -40px;
+    position: absolute;
+}
+
+.serbox div{
+    height: 130px;
+}
+
+.service-body :nth-of-type(2) img{
+   width:var(--imgS-serimg);
+}
+
+.service-body :nth-of-type(3) img{
+    width:var(--imgS-serimg);
+
+}
+
+.serbox h3{
+
 }
 /* end of service page  */
 
 /* pricing page */
 .pricing{
     margin-bottom: 10rem;
-    overflow-x:scroll;
-    display: grid;
-    place-items: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
+#prevBtn, #nextBtn{
+    width: 2.5rem;
+    margin: 20px;
+}
+
 .pricing-body{
-    width:fit-content;
+    width:100%;
+    min-width: 300px;
+    overflow-x: scroll;
     display: flex;
     gap: 20px;
-    justify-content: space-around;
+    align-items: center;
+    justify-content:start;
+}
+.pricing-body::-webkit-scrollbar{
+    display: none;
 }
 .priceslide{
-    width:var(--boxS-pribox); 
+    width:var(--boxS-pribox);
+    min-width: 250px; 
     color:white;
     background: black;
     border-radius: 20px;
@@ -379,8 +429,7 @@ main{
 .ctn-body{
     width: 100%;
     display: grid;
-    gap: 25px;
-    grid-template-columns: 55% 45%;
+    
 }
 .slide{
     background: rgba( 255, 255, 255, 0.2 );
@@ -395,12 +444,44 @@ main{
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 }
 .ctnbox{
-   
+   /* display: grid;
+   justify-content:center; 
+   width: 100%; */
+   width: 90%;
+}
+.conhead{
+    display: grid;
+    place-items: center;
+    height: 30%;
+}
+.conhead h4{
+    font-size: 2.5rem;
+    margin: 1rem auto 0px auto;
+}
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 70%;
+    justify-content: center;
+    align-content: center;
+
+}
+.info div{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    margin-right: 1.5rem;
     
 }
-.sobox{
-   
+.info img{
+    width: 35px;
+    margin: 0 10px;
 }
+.info h5{
+    font-size: 1.5rem;
+}
+
 
 
 /* media query */
@@ -464,6 +545,7 @@ main{
     .box-3{
         height: 400px;
     }
+    /* end of about page */
 }
 
 
@@ -471,12 +553,16 @@ main{
 @media (max-width:600px){
     main{
         padding: 0 5vw;
-        width: 100vw;
+        width: 90vw;
+    }
+    .section{
+        width: 90vw;
     }
     .head{
         position: relative;
         width: 90vw;
         height: 10rem;
+        margin: 0rem 0;
     } 
     .hero{
         margin-top: 5rem;
@@ -507,3 +593,27 @@ main{
 }
 
 /* end of media query */
+
+/* animations */
+
+@keyframes slideInLeft {
+    from{
+        transform: translateX(-400px);
+        opacity: 20%;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 100%;
+    }
+   
+}
+@keyframes slideInRight {
+    from{
+        transform: translateX(400px);
+        opacity: 20%;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}

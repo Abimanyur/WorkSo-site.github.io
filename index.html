@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="./app/css/style.css">
     <title>WorkSo</title>
@@ -18,17 +21,17 @@
                     </button>
                 </span> 
                 <span class="nav-center">
-                    <ul>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">SERVICE</a></li>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                        <li><a href="#">PRICING</a></li>
+                    <ul id="navLink">
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#sersec">SERVICE</a></li>
+                        <li><a href="#prisec">PRICING</a></li>
+                        <li><a href="#abosec">ABOUT</a></li>
+                        <li><a href="#consec">CONTACT</a></li>
                     </ul>
                 </span>
             </nav>   
         </div>
-        <div class="hero">
+        <div class="hero" id="home">
               <span class="hero-title">
                 <h1>Welcome to Workso,</h1>
                 <p>
@@ -65,7 +68,7 @@
         </div>
     </header>
     <main>
-        <div class="head">
+        <div class="head anime" id="sersec">
             <span class="starp">
                 <span class="starp other">
                 </span>
@@ -73,11 +76,12 @@
             <h1>Elevate Your Business with Workso's Dynamic Digital Services</h1>
         </div>
         <section class="service">
-            
             <div class="service-body">
                 <div class="serbox">
-                    <img src="./images/Video tutorial-bro.png" alt="img">
-                    <h4>Content Marketing:</h4>
+                    <div>
+                        <img src="./images/Video tutorial-bro.png" alt="img">
+                    </div>
+                    <h3>Content Marketing:</h3>
                     <p>
                         At Workso, we understand the power of compelling
                         content in today's digital landscape. Our Content 
@@ -86,8 +90,10 @@
                     </p>
                 </div>
                 <div class="serbox">
-                    <img src="./images/Marketing-cuate.png" alt="img">
-                    <h4>Social Media Marketing (SMM):</h4>
+                    <div>
+                        <img src="./images/Marketing-cuate.png" alt="img">
+                    </div>
+                    <h3>Social Media Marketing (SMM):</h3>
                     <p>
                         Embark on a journey of unparalleled Social Media 
                         Marketing excellence with Workso. We're not just 
@@ -97,8 +103,10 @@
                     </p>
                 </div>
                 <div class="serbox">
-                    <img src="./images/Content structure.png" alt="img">
-                    <h4>Web Design & Development</h4>
+                    <div>
+                        <img src="./images/Content structure.png" alt="img">
+                    </div>
+                    <h3>Web Design & Development</h3>
                     <p>
                         At Workso, we don't just build websites; we 
                         sculpt digital experiences that leave an indelible 
@@ -110,7 +118,7 @@
                 </div>
             </div>
         </section>
-        <div class="head">
+        <div class="head anime" id="prisec">
             <span class="starp">
                 <span class="starp other">
                 </span>
@@ -118,57 +126,58 @@
             <h1>pricing</h1>
         </div>
         <div class="pricing">
-            <div class="pricing-body">
-                <div class="priceslide">
-                    <div class="slideheader">
-                        <h3>Basic</h3>
+                <img src="./images/previous.png" alt="previous" id="prevBtn">
+                <div class="pricing-body">
+                    <div class="priceslide">
+                        <div class="slideheader">
+                            <h3>Basic</h3>
+                        </div>
+                        <div></div>
+                        <div>
+                            <p>
+                                digitel Ads(worth &#8377 2,000)
+                                product photography
+                                10 post / 10 reels short videos
+                                / 2 advertisment poster
+                            </p>
+                        </div>
+                        
                     </div>
-                    
-                    <div></div>
-                    <div>
-                        <p>
-                            digitel Ads(worth &#8377 2,000)
-                            product photography
-                            10 post / 10 reels short videos
+                    <div class="priceslide">
+                        <div class="slideheader">
+                            <h3>Professional</h3>
+                        </div>
+                        
+                        <div></div>
+                        <div>
+                            <p>digitel Ads(worth &#8377 3,000)<br>
+                            product photography<br>
+                            15 post / 15 reels short videos<br> 
                             / 2 advertisment poster
-                        </p>
+                            </p>    
+                        </div>
+                        
                     </div>
-                    
+                    <div class="priceslide">
+                        <div class="slideheader">
+                            <h3>Business</h3>
+                        </div>
+                        
+                        <div></div>
+                        <div>
+                            <p>
+                                digitel Ads(worth &#8377 4,000)<br>
+                            product photography<br>
+                            15 post / 15 reels short videos<br> 
+                            / 2 advertisment poster
+                            </p>
+                        </div>
+                        
+                    </div>
                 </div>
-                <div class="priceslide">
-                    <div class="slideheader">
-                        <h3>Professional</h3>
-                    </div>
-                    
-                    <div></div>
-                    <div>
-                        <p>digitel Ads(worth &#8377 3,000)<br>
-                        product photography<br>
-                        15 post / 15 reels short videos<br> 
-                        / 2 advertisment poster
-                        </p>    
-                    </div>
-                    
-                </div>
-                <div class="priceslide">
-                    <div class="slideheader">
-                        <h3>Business</h3>
-                    </div>
-                    
-                    <div></div>
-                    <div>
-                        <p>
-                            digitel Ads(worth &#8377 4,000)<br>
-                        product photography<br>
-                        15 post / 15 reels short videos<br> 
-                        / 2 advertisment poster
-                        </p>
-                    </div>
-                    
-                </div>
-            </div>
+                <img src="./images/next.png" alt="next" id="nextBtn">
         </div>
-        <div class="head">
+        <div class="head anime" id="abosec">
             <span class="starp">
                 <span class="starp other">
                 </span>
@@ -249,19 +258,37 @@
                 </div>
             </div>
         </section>
-        <div class="head">
+        <div class="head anime" id="consec">
             <span class="starp">
                 <span class="starp other">
                 </span>
             </span>
-            <h1>Contact</h1>
+            <h1>Contact us</h1>
         </div>
         <section class="content">
             <div class="ctn-body">
                 <div class="slide ctnbox">
-                    
+                    <div class="conhead">
+                        <h4>Get in Touch</h4>
+                        <p>Interested to Explore more?</p>
+                    </div>
+                    <div class="info">
+                        <div class="call">
+                            <img src="./images/call.svg" alt="call">
+                            <h5>+91 9xxxxxxxx</h5>
+                        </div>
+                        <div>
+                            <img src="./images/email.svg" alt="email">
+                            <h5>WorkSomanagement@gmail.com</h5>
+                        </div>
+                        <div class="inst">
+                            <img src="./images/inst.png">
+                            <h5>@workso_media_</h5>
+                        </div>
+                    </div>
+                    <!-- <div class="sobox">
+                    </div> -->
                 </div>
-                <div class="slide sobox"></div>
             </div>
         </section>
     </main>
