@@ -4,10 +4,12 @@
     --white: #ffff;
     --fs-h1:clamp(1.5rem, 0.924vw + 1.261rem, 2rem);
     --fs-h2:clamp(0.625rem, 0.924vw + 0.386rem, 1.125rem);
+    --fs-h5:clamp(0.9rem, 1.109vw + 0.613rem, 1.5rem);
     --fs-480:clamp(15.625rem, 26.559vw + 8.753rem, 30rem);
     --transition: all 0.3s linear;
     --boxS-serbox:clamp(14.5rem, 19.4vw + 9.48rem, 25rem);
     --boxS-pribox:clamp(25.625rem, 5.774vw + 14.131rem, 18.75rem);
+    --imgs--conimg:clamp(1.5rem, 1.27vw + 1.171rem, 2.188rem);
     --imgS-serimg:clamp(9.375rem, 5.774vw + 7.881rem, 12.5rem);
 }
 
@@ -102,7 +104,7 @@ p{
     position: fixed;
     top: 0;
     right: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 100;
     
 }
@@ -123,7 +125,7 @@ nav{
     align-items:center;
 }
 .name h2 a{
-    color: #5c3939;
+    color: #ffffff;
 }
 
 .nav-center{
@@ -218,7 +220,7 @@ main{
     width: var(--boxS-serbox);
     min-height: 400px;
     height:fit-content;
-    max-height: 450px;
+    max-height: 500px;
     background: black;
     margin: 20px;
     color: #ffff;
@@ -254,19 +256,21 @@ main{
 /* pricing page */
 .pricing{
     margin-bottom: 10rem;
-    display:flex;
-    align-items: center;
-    justify-content: center;
+    display:grid;
+    width: 100%;
+    grid-template-columns: 15% auto 15%;
+    place-items: center;
     position: relative;
 }
 #prevBtn, #nextBtn{
     width: 2.5rem;
     margin: 20px;
+    
 }
 
 .pricing-body{
-    width:100%;
-    min-width: 300px;
+    width:90%;
+    min-width: 275px;
     overflow-x: scroll;
     display: flex;
     gap: 20px;
@@ -309,6 +313,8 @@ main{
 .about{
     height: fit-content;
     margin-bottom: 5rem;
+    display: grid;
+    place-items: CENTER;
     padding: 0 ;
     
 }
@@ -429,6 +435,7 @@ main{
 .ctn-body{
     width: 100%;
     display: grid;
+    place-items: center;
     
 }
 .slide{
@@ -475,11 +482,12 @@ main{
     
 }
 .info img{
-    width: 35px;
+    width: var(--imgs--conimg);
     margin: 0 10px;
 }
 .info h5{
-    font-size: 1.5rem;
+    font-size: var(--fs-h5);
+    margin: 0;
 }
 
 
@@ -497,6 +505,11 @@ main{
 /* second sage */
 @media (max-width:768px){
     /* nav bar */
+    .nav-bar{
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
     nav{
         flex-direction: column;
         justify-content: start;
@@ -590,6 +603,9 @@ main{
         font-size: 1.5rem;
     } */
     
+    .info div{
+        margin: 0.5rem 5px;
+    }
 }
 
 /* end of media query */
